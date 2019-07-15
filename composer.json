@@ -1,0 +1,25 @@
+{
+    "name": "ismat/backup",
+    "description": "",
+    "authors": [
+        {
+            "name": "Ismat Babirli",
+            "email": "i.babirli@outlook.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Backup\\Providers\\BackupServiceProvider"
+            ],
+            "aliases": {
+                "Bar": "Modules\\Backup\\Providers\\Facade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Backup\\": ""
+        }
+    }
+}
