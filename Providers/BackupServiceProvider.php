@@ -2,6 +2,7 @@
 
 namespace Modules\Backup\Providers;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 use Modules\Backup\Console\BackupCommand;
