@@ -35,7 +35,7 @@ Options of command
 ```$xslt
 
 --table -t [--table=test or -t test] | Backup only one table
---data -d                            | Backup only data not table structure
+--data  -d  [--data=1 or -d 1]       | Backup only data not table structure
 
 ```
 
