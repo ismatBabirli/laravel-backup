@@ -23,6 +23,7 @@ Then create folder in storage path as backups like this
 ```$xslt
 ../storage/backups
 ```
+
 ### Usage
 For backup all tables in database run this command
 
