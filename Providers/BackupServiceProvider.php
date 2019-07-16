@@ -2,9 +2,7 @@
 
 namespace Modules\Backup\Providers;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\Factory;
 use Modules\Backup\Console\BackupCommand;
 
 class BackupServiceProvider extends ServiceProvider
@@ -16,11 +14,8 @@ class BackupServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        $this->registerTranslations();
         $this->registerConfig();
-//        $this->registerViews();
-//        $this->registerFactories();
-//        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+
 
 
     }
@@ -32,7 +27,6 @@ class BackupServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(RouteServiceProvider::class);
         $this->commands([
             BackupCommand::class,
         ]);
@@ -54,61 +48,5 @@ class BackupServiceProvider extends ServiceProvider
         );
     }
 
-    /**
-     * Register views.
-     *
-     * @return void
-     */
-    public function registerViews()
-    {
-        $viewPath = resource_path('views/modules/backup');
 
-        $sourcePath = __DIR__ . '/../Resources/views';
-
-        $this->publishes([
-            $sourcePath => $viewPath
-        ], 'views');
-
-        $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/backup';
-        }, \Config::get('view.paths')), [$sourcePath]), 'backup');
-    }
-
-    /**
-     * Register translations.
-     *
-     * @return void
-     */
-    public function registerTranslations()
-    {
-        $langPath = resource_path('lang/modules/backup');
-
-        if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, 'backup');
-        } else {
-            $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'backup');
-        }
-    }
-
-    /**
-     * Register an additional directory of factories.
-     *
-     * @return void
-     */
-    public function registerFactories()
-    {
-        if (!app()->environment('production')) {
-            app(Factory::class)->load(__DIR__ . '/../Database/factories');
-        }
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [];
-    }
 }
