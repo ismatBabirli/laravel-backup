@@ -36,7 +36,7 @@ Options of command
 
 ## Authors
 
-* **Ismat Babirli** - *Initial work* - [Iron Man](https://github.com/ismatBabirli)
+* **Ismat Babirli** - *Backend Engineer* - [Iron Man](https://github.com/ismatBabirli)
 
 
 ## License
