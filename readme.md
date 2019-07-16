@@ -18,6 +18,11 @@ After installation publish backups folder to storage and config to config path w
 php artisan vendor:publish --provider="Modules\Backup\Providers\BackupServiceProvider"
 
 ```
+
+Then create folder in storage path as backups like this
+```$xslt
+../storage/backups
+```
 ### Usage
 For backup all tables in database run this command
 

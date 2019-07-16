@@ -41,7 +41,6 @@ class BackupServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../Config/config.php' => config_path('backup.php'),
-            __DIR__ . '/../backups' => storage_path("backups"),
         ], 'config');
         $this->mergeConfigFrom(
             __DIR__ . '/../Config/config.php', 'backup'

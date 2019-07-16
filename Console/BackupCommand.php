@@ -77,7 +77,6 @@ class BackupCommand extends Command
             $this->process->mustRun();
             $this->info('The backup has been proceed successfully.');
         } catch (ProcessFailedException $exception) {
-            dd($exception);
             $this->error('The backup process has been failed.');
         }
     }
