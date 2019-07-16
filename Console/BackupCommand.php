@@ -49,7 +49,7 @@ class BackupCommand extends Command
 
         try {
             $options = $this->options();
-            $command = "mysqldump -u %s -p %s ";
+            $command = "mysqldump -u%s -p%s ";
 
             if (isset($options['data']))
                 $command = "mysqldump --no-create-db --no-create-info -u%s -p%s ";
@@ -77,6 +77,7 @@ class BackupCommand extends Command
             $this->process->mustRun();
             $this->info('The backup has been proceed successfully.');
         } catch (ProcessFailedException $exception) {
+            dd($exception);
             $this->error('The backup process has been failed.');
         }
     }
