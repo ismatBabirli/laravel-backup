@@ -21,10 +21,5 @@
         "psr-4": {
             "Modules\\Backup\\": ""
         }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "MyVendor\\VendorScript::run"
-        ]
     }
 }
