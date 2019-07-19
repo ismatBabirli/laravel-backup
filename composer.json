@@ -1,6 +1,11 @@
 {
     "name": "ismat/backup",
+    "license": "MIT",
     "description": "",
+    "require": {
+        "php": "^7.0",
+        "ext-mbstring": "*"
+    },
     "authors": [
         {
             "name": "Ismat Babirli",
